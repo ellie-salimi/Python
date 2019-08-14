@@ -5,23 +5,25 @@ five_by_five_grid = [
 ['0','X','X','X','X'],
 ['X','0','0','X','X'],
 ]
+row = 0
+col = 0
+a = 0
+b=0
+while row < len(five_by_five_grid):
+    for items_r in five_by_five_grid[row]:
+        if items_r == 'X':
+            a=a+1
+        else:
+            b=b+1
+    print(a,b)
+    if a%2 == 1:
+        five_by_five_grid[row].append ('X')
+    else:
+        five_by_five_grid[row].append ('0')
+    row = row + 1
+    a=0
+    b=0
 
-#comment
-counter = 0
-for items in five_by_five_grid [counter]:
-    a = 0
-    b = 0
-    if five_by_five_grid [counter] == 'X':
-        a=a+1
-    else:
-        b=b+1
-    if a/2 == 1:
-       five_by_five_grid [counter].append = 'X'
-    else:
-        five_by_five_grid.append = '0' 
-        
-    counter = counter +1
-    
 #original for loop to print grid
 for items in five_by_five_grid:
     print(items)
