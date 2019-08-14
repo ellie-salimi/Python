@@ -12,6 +12,10 @@ for items in five_by_five_grid [counter]:
     a = 0
     b = 0
     if five_by_five_grid [counter] == 'X':
+        a=a+1
+    else:
+        b=b+1
+    if a
         
     counter = counter +1
     
