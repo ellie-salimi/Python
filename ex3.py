@@ -15,7 +15,10 @@ for items in five_by_five_grid [counter]:
         a=a+1
     else:
         b=b+1
-    if a
+    if a/2 == 1:
+       five_by_five_grid [counter].append= 'X'
+    else:
+        five_by_five_grid.append = '0' 
         
     counter = counter +1
     
