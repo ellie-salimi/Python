@@ -27,7 +27,23 @@ while row < len(five_by_five_grid):
 #original for loop to print grid
 for items in five_by_five_grid:
     print(items)
-
+print('***********************')
+five_by_five_grid.append([])
+for items_r in range(0,4):
+    for items_c in range(0,4):
+        if five_by_five_grid[items_c][items_r] == 'X':
+            a=a+1
+        else:
+            b=b+1
+        if a%2 == 1:
+            five_by_five_grid[5].append ('X')
+        else:
+            five_by_five_grid[5].append ('0')
+        row = row + 1
+        a=0
+        b=0
+for items in five_by_five_grid:
+    print(items)
 #input request from user
 change = input("What row and column do we change?" )
 #takes the user's string index 1 (row) and turns it into an interger
