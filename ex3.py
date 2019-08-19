@@ -45,7 +45,7 @@ five_by_five_grid.append(extended_cul)
 for items in five_by_five_grid:
     print(items)
 #input request from user
-message = print ('Hey! for next step please start counting from 1 not 0 as non-programmer people start countiing from 1 :)')
+message = print ('Hey! for next step please start counting from 1 not 0 as non-programmer people start counting from 1 :)')
 change = input("What row and column do we change?" )
 #takes the user's string index 1 (row) and turns it into an interger
 change_r = int(change[1])
