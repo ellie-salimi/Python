@@ -5,8 +5,10 @@ five_by_five_grid = [
 ['0','X','X','X','X'],
 ['X','0','0','X','X'],
 ]
-row = 0
+
 col = 0
+
+row = 0
 a = 0
 b=0
 while row < len(five_by_five_grid):
@@ -15,7 +17,7 @@ while row < len(five_by_five_grid):
             a=a+1
         else:
             b=b+1
-    print(a,b)
+    #print(a,b)
     if a%2 == 1:
         five_by_five_grid[row].append ('X')
     else:
@@ -27,24 +29,23 @@ while row < len(five_by_five_grid):
 #original for loop to print grid
 for items in five_by_five_grid:
     print(items)
-print('***********************')
-five_by_five_grid.append([])
-for items_r in range(0,4):
-    for items_c in range(0,4):
-        if five_by_five_grid[items_c][items_r] == 'X':
-            a=a+1
-        else:
-            b=b+1
-        if a%2 == 1:
-            five_by_five_grid[5].append ('X')
-        else:
-            five_by_five_grid[5].append ('0')
-        row = row + 1
-        a=0
-        b=0
+print('**********the above is for extra column*************')
+extended_cul=[]
+for col in range(0,6):
+    my_sum =0 
+    for row in five_by_five_grid:
+        x_counter = row[col].count('X')
+        my_sum = my_sum + x_counter
+    if my_sum %2 == 0:
+        extended_cul.append('0')   
+    else:
+        extended_cul.append('X')
+five_by_five_grid.append(extended_cul)
+
 for items in five_by_five_grid:
     print(items)
 #input request from user
+message = print ('Hey! for next step please start counting from 1 not 0 as non-programmer people start countiing from 1 :)')
 change = input("What row and column do we change?" )
 #takes the user's string index 1 (row) and turns it into an interger
 change_r = int(change[1])
